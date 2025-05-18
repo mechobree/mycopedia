@@ -1,6 +1,7 @@
 package net.mechobree.mycopedia;
 
 import com.mojang.logging.LogUtils;
+import net.mechobree.mycopedia.block.ModBlocks;
 import net.mechobree.mycopedia.item.ModCreativeModTabs;
 import net.mechobree.mycopedia.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -33,6 +34,7 @@ public class Mycopedia
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

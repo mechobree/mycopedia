@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:block",
+
+  "pools": [
+
+    {
+
+      "bonus_rolls": 0.0,
+
+      "conditions": [
+
+        {
+
+          "condition": "minecraft:survives_explosion"
+
+        }
+
+      ],
+
+      "entries": [
+
+        {
+
+          "type": "minecraft:item",
+
+          "name": "mycopedia:missing_texture_block"
+
+        }
+
+      ],
+
+      "rolls": 1.0
+
+    }
+
+  ],
+
+  "random_sequence": "mycopedia:blocks/missing_texture_block"
+
+}

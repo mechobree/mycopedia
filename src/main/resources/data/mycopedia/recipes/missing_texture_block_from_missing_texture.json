@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MM ",
+    "MM ",
+    "   "
+  ],
+  "key": {
+    "M": {
+      "item": "mycopedia:missing_texture"
+    }
+  },
+  "result": {
+    "item": "mycopedia:missing_texture_block"
+  }
+}

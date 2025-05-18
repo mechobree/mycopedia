@@ -1,5 +1,8 @@
 {
   "creativetab.mycopedia": "Mycopedia",
+  "item.mycopedia.mycopedia_guide": "Mycopedia",
   "item.mycopedia.missing_texture": "MISSING_TEXTURE",
-  "item.mycopedia.evil_missing_texture": "EVIL_MISSING_TEXTURE"
+  "item.mycopedia.evil_missing_texture": "EVIL_MISSING_TEXTURE",
+
+  "block.mycopedia.missing_texture_block": "MISSING_TEXTURE_BLOCK"
 }

@@ -1,6 +1,7 @@
 package net.mechobree.mycopedia.item;
 
 import net.mechobree.mycopedia.Mycopedia;
+import net.mechobree.mycopedia.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -15,11 +16,16 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Mycopedia.MOD_ID);
 
     public static  final RegistryObject<CreativeModeTab> MYCOPEDIA_TAB = CREATIVE_MODE_TABS.register("mycopedia",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MISSING_TEXTURE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MISSING_TEXTURE_BLOCK.get()))
                     .title(Component.translatable("creativetab.mycopedia"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        // Items added to creative tab
+                        output.accept(ModItems.MYCOPEDIA_GUIDE.get());
                         output.accept(ModItems.MISSING_TEXTURE.get());
                         output.accept(ModItems.EVIL_MISSING_TEXTURE.get());
+
+                        // Blocks added to creative tab
+                        output.accept(ModBlocks.MISSING_TEXTURE_BLOCK.get());
                     })
                     .build());
 

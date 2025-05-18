@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mycopedia:missing_texture_block"
+    }
+  ],
+  "result": {
+    "item": "mycopedia:missing_texture",
+    "count": 4
+  }
+}
