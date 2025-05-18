@@ -1,6 +1,9 @@
 package net.mechobree.mycopedia;
 
 import com.mojang.logging.LogUtils;
+import net.mechobree.mycopedia.item.ModCreativeModTabs;
+import net.mechobree.mycopedia.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,6 +30,10 @@ public class Mycopedia
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -45,7 +52,10 @@ public class Mycopedia
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.MISSING_TEXTURE);
+            event.accept(ModItems.EVIL_MISSING_TEXTURE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
